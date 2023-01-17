@@ -13377,6 +13377,13 @@ div#notebook {
 <li>Average retweet count and favorite count over time</li>
 <li>How does the most common dog breed look like?</li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.-What-is-the-most-common-dog-stage?">1. What is the most common dog stage?<a class="anchor-link" href="#1.-What-is-the-most-common-dog-stage?">&#182;</a></h3><p>I used the <code>value_counts()</code> method to count the number of dogs in each dog stage. I then used the <code>plot()</code> method to plot the dog stage counts. However, some dog stages contain multiple dog stages. I used the <code>str.split()</code> method to split the dog stages into a list. I then used the <code>explode()</code> method to explode the list into multiple rows. I then used the <code>value_counts()</code> method to count the number of dogs in each dog stage. I then used the <code>plot()</code> method to plot the dog stage counts.</p>
 <div class="highlight"><pre><span></span><span class="n">dog_stage_df</span>  <span class="o">=</span> <span class="n">twitter_archive_master</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dog_stage</span><span class="o">=</span><span class="n">twitter_archive_master</span><span class="p">[</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">explode</span><span class="p">(</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;darkgrid&#39;</span><span class="p">)</span> <span class="c1"># Set the style of the plot</span>
@@ -13388,7 +13395,14 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 <p><img src="distribution_dog_stage.png" alt="Distribution of the Dog Stage"></p>
-<caption> Distribution of the Dog Stage: The most common dog stage is the pupper. The least common dog stage is the floofer. </caption><h3 id="2.-What-is-the-most-common-dog-breed?">2. What is the most common dog breed?<a class="anchor-link" href="#2.-What-is-the-most-common-dog-breed?">&#182;</a></h3><p>I used the <code>value_counts()</code> method to count the number of dogs in each dog breed. I then used the <code>plot()</code> method to plot the dog breed counts.</p>
+<caption> Distribution of the Dog Stage: The most common dog stage is the pupper. The least common dog stage is the floofer. </caption>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-What-is-the-most-common-dog-breed?">2. What is the most common dog breed?<a class="anchor-link" href="#2.-What-is-the-most-common-dog-breed?">&#182;</a></h3><p>I used the <code>value_counts()</code> method to count the number of dogs in each dog breed. I then used the <code>plot()</code> method to plot the dog breed counts.</p>
 <div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;darkgrid&#39;</span><span class="p">)</span> <span class="c1"># Set the style of the plot</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s1">&#39;Set2&#39;</span><span class="p">)</span> <span class="c1"># Set the color of the plot</span>
@@ -13398,7 +13412,14 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Dogs&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 <p><img src="top_10_dog_breeds.png" alt="Top 10 Dog Breeds in the Dataset"></p>
-<caption> Top 10 Dog Breeds in the Dataset: The most common dog breed is the golden retriever. The least common dog breed is the cocker spaniel in this graph. </caption><h3 id="3.-Is-there-a-relationship-between-the-retweet-count-and-the-favorite-count?">3. Is there a relationship between the retweet count and the favorite count?<a class="anchor-link" href="#3.-Is-there-a-relationship-between-the-retweet-count-and-the-favorite-count?">&#182;</a></h3><p>I used the <code>scatterplot()</code> method to plot the retweet count and the favorite count. I then used the <code>regplot()</code> method to plot the regression line. From the plot, we can see that there is a positive relationship between the favorite count and the retweet count. As number of favorite count increases, the number of retweet count increases.</p>
+<caption> Top 10 Dog Breeds in the Dataset: The most common dog breed is the golden retriever. The least common dog breed is the cocker spaniel in this graph. </caption>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.-Is-there-a-relationship-between-the-retweet-count-and-the-favorite-count?">3. Is there a relationship between the retweet count and the favorite count?<a class="anchor-link" href="#3.-Is-there-a-relationship-between-the-retweet-count-and-the-favorite-count?">&#182;</a></h3><p>I used the <code>scatterplot()</code> method to plot the retweet count and the favorite count. I then used the <code>regplot()</code> method to plot the regression line. From the plot, we can see that there is a positive relationship between the favorite count and the retweet count. As number of favorite count increases, the number of retweet count increases.</p>
 <div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;darkgrid&#39;</span><span class="p">)</span> <span class="c1"># Set the style of the plot</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s1">&#39;Set2&#39;</span><span class="p">)</span> <span class="c1"># Set the color of the plot</span>
@@ -13409,7 +13430,14 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Favorite Count&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 <p><img src="retweet_count_favorite_count_scatter_plot.png" alt="Relationship between the Retweet Count and the Favorite Count"></p>
-<caption> Relationship between the Retweet Count and the Favorite Count: There is a positive relationship between the favorite count and the retweet count. As number of favorite count increases, the number of retweet count increases. </caption><h3 id="4.-Average-retweet-count-and-favorite-count-over-time">4. Average retweet count and favorite count over time<a class="anchor-link" href="#4.-Average-retweet-count-and-favorite-count-over-time">&#182;</a></h3><p>I used the <code>groupby()</code> method to group the data by the year and the month. I then used the <code>mean()</code> method to calculate the average retweet count and the average favorite count. I then used the <code>plot()</code> method to plot the average retweet count and the average favorite count over time.</p>
+<caption> Relationship between the Retweet Count and the Favorite Count: There is a positive relationship between the favorite count and the retweet count. As number of favorite count increases, the number of retweet count increases. </caption>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.-Average-retweet-count-and-favorite-count-over-time">4. Average retweet count and favorite count over time<a class="anchor-link" href="#4.-Average-retweet-count-and-favorite-count-over-time">&#182;</a></h3><p>I used the <code>groupby()</code> method to group the data by the year and the month. I then used the <code>mean()</code> method to calculate the average retweet count and the average favorite count. I then used the <code>plot()</code> method to plot the average retweet count and the average favorite count over time.</p>
 <div class="highlight"><pre><span></span><span class="n">twitter_archive_master</span><span class="p">[</span><span class="s1">&#39;year_month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">twitter_archive_master</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
 
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;darkgrid&#39;</span><span class="p">)</span> <span class="c1"># Set the style of the plot</span>
@@ -13420,8 +13448,15 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Average of Retweet Count and Favorite Count&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<p><img src="average_retweet_count_favorite_count.png" alt="Average of Retweet Count and Favorite Count for Each Month in Dataset"></p>
-<caption> Average of Retweet Count and Favorite Count for Each Month in Dataset: The average retweet count and the average favorite count increases over time. </caption><h3 id="5.-How-does-the-most-common-dog-breed-look-like?">5. How does the most common dog breed look like?<a class="anchor-link" href="#5.-How-does-the-most-common-dog-breed-look-like?">&#182;</a></h3><p>I used the <code>query()</code> method to filter the dataframe to only include the golden retriever. Based on other analysis and visualizations, I know that the golden retriever is the most common dog breed in the dataset. I then sorted the dataframe by the favorite count. I then used the <code>head()</code> method to get the top 5 rows. Using the <code>requests</code> library, I downloaded the images from the <code>jpg_url</code> column. I then used the <code>Image</code> library to display the images.</p>
+<p><img src="average_retweet_favorite_count.png" alt="Average of Retweet Count and Favorite Count for Each Month in Dataset"></p>
+<caption> Average of Retweet Count and Favorite Count for Each Month in Dataset: The average retweet count and the average favorite count increases over time. </caption>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="5.-How-does-the-most-common-dog-breed-look-like?">5. How does the most common dog breed look like?<a class="anchor-link" href="#5.-How-does-the-most-common-dog-breed-look-like?">&#182;</a></h3><p>I used the <code>query()</code> method to filter the dataframe to only include the golden retriever. Based on other analysis and visualizations, I know that the golden retriever is the most common dog breed in the dataset. I then sorted the dataframe by the favorite count. I then used the <code>head()</code> method to get the top 5 rows. Using the <code>requests</code> library, I downloaded the images from the <code>jpg_url</code> column. I then used the <code>Image</code> library to display the images.</p>
 <div class="highlight"><pre><span></span><span class="n">golden_retriever_df</span> <span class="o">=</span> <span class="n">twitter_archive_master</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;prediction_1 == &quot;golden_retriever&quot;&#39;</span><span class="p">)</span>
 <span class="n">golden_retriever_df</span> <span class="o">=</span> <span class="n">golden_retriever_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;favorite_count&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">golden_retriever_df_5</span> <span class="o">=</span> <span class="n">golden_retriever_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -13448,7 +13483,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<table style="width:800px">
+<table style="width:100%">
     <tr>
         <th style="border: 3px solid black; font-size: 22px">tweet_id</th>
         <th style="border: 3px solid black; font-size: 22px">favorite_count</th>
